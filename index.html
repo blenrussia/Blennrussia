@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blenn Russia - Ролевая игра</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ff6b6b, #ffa500, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .game-description {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .feature-card {
+            background: rgba(30, 30, 46, 0.7);
+            border-radius: 10px;
+            padding: 25px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ffa500;
+        }
+        
+        .feature-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+        
+        .feature-description {
+            color: #b0b0b0;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(20, 20, 35, 0.7);
+            margin: 50px 0;
+            border-radius: 15px;
+        }
+        
+        .cta-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #ffa500;
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .step {
+            background: rgba(40, 40, 60, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+        
+        .step-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+        
+        .step-description {
+            color: #e0e0e0;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(to right, #ff6b6b, #ffa500);
+            color: white;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+        }
+        
+        .telegram-icon {
+            margin-right: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .feature-card, .step {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .game-description {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Blenn Russia</h1>
+            <p class="tagline">Ролевая игра, где ты решаешь, кем быть</p>
+        </header>
+        
+        <section class="hero">
+            <p class="game-description">
+                Ролевая игра, где ты решаешь, кем быть: одиночкой или лидером, героем или теневым боссом. 
+                Прокачивайся, собирай команду и строй репутацию. Присоединяйся к миллионам и забери своё.
+            </p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">ВСТУПАЙ В СЕМЬЮ</h3>
+                    <p class="feature-description">Объединяйся с другими игроками, создавай могущественные кланы и доминируй на улицах города.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="feature-title">УДЕРЖИВАЙ РАЙОН</h3>
+                    <p class="feature-description">Захватывай территории, защищай их от врагов и получай прибыль от контроля над районом.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="feature-title">СТАНЬ ЛЕГЕНДОЙ</h3>
+                    <p class="feature-description">Создай уникального персонажа, развивай его навыки и стань известным по всему городу.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <h2 class="cta-title">НАЧНИ ИГРАТЬ</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">#1</div>
+                    <p class="step-description">Скачай игру любым удобным способом</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">#2</div>
+                    <p class="step-description">Введи свой игровой ник</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">#3</div>
+                    <p class="step-description">Нажми на кнопку «Играть»</p>
+                </div>
+            </div>
+            
+            <a href="https://t.me/rubinmobail/281" class="download-btn" target="_blank">
+                <i class="fab fa-telegram telegram-icon"></i> СКАЧАТЬ В TELEGRAM
+            </a>
+        </section>
+        
+        <footer>
+            <p>© 2023 Blenn Russia. Все права защищены.</p>
+        </footer>
+    </div>
+</body>
+</html>
